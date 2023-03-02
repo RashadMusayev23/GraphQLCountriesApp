@@ -1,4 +1,4 @@
-package com.mazeppa.graphqlcountriesapp.ui.theme
+package com.mazeppa.graphqlcountriesapp.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

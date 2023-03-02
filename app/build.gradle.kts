@@ -5,16 +5,16 @@ import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("com.apollographql.apollo3").version("3.7.3")
+    id("com.apollographql.apollo3").version("3.7.4")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
 }
 
-//apollo {
-//    service("service") {
-//        packageName.set("com.plcoding")
-//    }
-//}
+apollo {
+    service("service") {
+        packageName.set("com.mazeppa")
+    }
+}
 
 android {
     namespace = "com.mazeppa.graphqlcountriesapp"
@@ -64,7 +64,7 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
+    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.activity:activity-compose:1.6.1")
     implementation("androidx.compose.ui:ui:1.3.3")
@@ -77,12 +77,12 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling:1.3.3")
     debugImplementation("androidx.compose.ui:ui-test-manifest:1.3.3")
 
-    implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
+    implementation("com.apollographql.apollo3:apollo-runtime:3.7.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
-    implementation("com.google.dagger:hilt-android:2.44.2")
-//    kapt("com.google.dagger:hilt-android-compiler:2.42")
-//    kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("com.google.dagger:hilt-android:2.45")
+    kapt("com.google.dagger:hilt-android-compiler:2.45")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
 }
