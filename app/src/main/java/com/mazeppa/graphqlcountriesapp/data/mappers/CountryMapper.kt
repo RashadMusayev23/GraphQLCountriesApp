@@ -17,7 +17,8 @@ fun CountryQuery.Country.toDetailedCountry(): DetailedCountry = DetailedCountry(
     languages = languages.mapNotNull {
         it.name
     },
-    continent = continent.name
+    continent = continent.name,
+    currency = currency ?: "No currency"
 )
 
 fun CountriesQuery.Country.toSimpleCountry(): SimpleCountry = SimpleCountry(

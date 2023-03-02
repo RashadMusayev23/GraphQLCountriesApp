@@ -8,7 +8,7 @@ import com.mazeppa.graphqlcountriesapp.domain.country.SimpleCountry
  */
 interface CountryClient {
 
-    suspend fun getCountries() : List<SimpleCountry>?
+    suspend fun getCountries() : List<SimpleCountry>
 
     suspend fun getCountry(code: String) : DetailedCountry?
 
